@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="port.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>MyPortfolio</title>
+</head>
+
+<body>
+    <section class="banner">
+        <header>
+            <a href="#" class="logo"><span>My</span>Portfolio_</a>
+            <ul>    
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a  href="resume.html">Resume</a></li>
+                <li><a href="practical1.html" >Work</a></li>
+                <li><a href="hire.html" >Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h3>Hey</h3>
+            <h2>I am <br><span id="text"></span></h2>
+            <p>I am a curious and lifelong learner, driven by a natural inclination for leadership and the pursuit of knowledge</p>
+            <button>Hire Me</button>
+        </div>
+        <ul class="sci">
+            <li><a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/harshpatel__1032" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <div class="daynight">
+            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon name="sunny-outline"></ion-icon>
+        </div>
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <ion-icon name="logo-web-component"></ion-icon>
+                    <h3>Front-End Developer</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                    <h3>Data Scientist</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                    <h3>Coder</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <ion-icon name="color-palette-outline"></ion-icon>
+                    <h3>Artist</h3>
+                </div>
+
+                <div class="circle"></div>
+            </div>
+            <div class="overlay">
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        let typingText = new Typed('#text',{
+            strings : ['Harsh Patel'],
+            loop : true,
+            typeSpeed : 100,
+            backSpeed : 50,
+            backDelay : 1000
+        })
+        let banner = document.querySelector('.banner');
+        let daynight = document.querySelector('.daynight');
+        daynight.onclick = function(){
+            banner.classList.toggle('night')
+        }
+    </script>
+</body>
+</html>
